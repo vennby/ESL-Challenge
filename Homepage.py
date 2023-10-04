@@ -1,8 +1,8 @@
 import streamlit as lit
 import time
 
-img_1 = "/content/MTC logo.png"
-img_2 = "/content/ESL_logo.png"
+img_1 = "ESL_logo.png"
+img_2 = "MTC logo.png"
 
 pages = {
     "MTC ESL Treasure Hunt": "MTC ESL Treasure Hunt",
