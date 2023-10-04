@@ -1,2 +1,2 @@
-streamlit==1.27.2
+streamlit==23.2.1
 time>=0.0.0
