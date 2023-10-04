@@ -4,11 +4,6 @@ import time
 img_1 = "/content/MTC logo.png"
 img_2 = "/content/ESL_logo.png"
 
-science = "/content/Science.mov"
-sharpener = "/content/Sharpener.mov"
-college = "/content/College.mov"
-mathematics = "/content/Mathematics.mov"
-
 pages = {
     "MTC ESL Treasure Hunt": "MTC ESL Treasure Hunt",
     "The Challenge": "The Challenge",
@@ -39,58 +34,6 @@ if page == "The Challenge":
     lit.write("3. Only click 'Begin' **after you have informed an MTC council member** that you're going to begin. :stopwatch:")
     lit.write("4. We mainly focus on **Education, Environment, Professions, Sports, and Landmarks** :eyes:")
     lit.write("")
-
-    start_button = lit.button("Begin the Challenge!")
-    stop_button = lit.button("Complete the Challenge!")
-
-    if "timer_value" not in lit.session_state:
-        lit.session_state.timer_value = 0
-
-    timer_text = lit.empty()
-
-    timer_value = 0
-    timer_running = False
-
-    if start_button:
-        timer_running = True
-        start_time = time.time() - lit.session_state.timer_value
-
-        math_video = open('/content/Mathematics.mov', 'rb')
-        math = math_video.read()
-
-        science_video = open('/content/Science.mov', 'rb')
-        science = science_video.read()
-
-        sharpener_video = open('/content/Sharpener.mov', 'rb')
-        sharpener = sharpener_video.read()
-
-        college_video = open('/content/College.mov', 'rb')
-        college = college_video.read()
-
-        lit.video(math)
-
-        lit.video(science)
-
-        lit.video(sharpener)
-
-        lit.video(college)
-
-        question_1 = lit.radio("1. Which of the above mean Science?", ["1","2","3","4"],index=None)
-
-        if question_1 is not None:
-            if question_1 == "2":
-                lit.write("Correct!")
-            else:
-                lit.write("Incorrect!")
-
-    while timer_running:
-        timer_text.text(f"Timer: {lit.session_state.timer_value} seconds")
-        time.sleep(1)
-        lit.session_state.timer_value = int(time.time() - start_time)
-
-    if stop_button:
-        final_time = lit.session_state.timer_value
-        lit.write(f"Congratulations, you took {final_time} seconds to complete this challenge!")
 
 if page == "The Resources":
     lit.subheader("Guidelines")
