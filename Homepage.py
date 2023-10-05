@@ -1,5 +1,4 @@
 import streamlit as lit
-import time
 
 img_1 = "ESL_logo.png"
 img_2 = "MTC logo.png"
@@ -20,7 +19,7 @@ page = getattr(lit.session_state, "page", list(pages.keys())[0])
 lit.title(pages[page])
 
 if page == "MTC ESL Treasure Hunt":
-    lit.image(img_1, use_column_width=False, width=200)
+    lit.image(img_2, use_column_width=False, width=200)
     lit.subheader("Welcome to MTC's Emirati Sign Language Challenge! :wave:")
     lit.write("If you signed up as Player 1, go to the 'Challenge' page.")
     lit.write("If you signed up as Player 2, go to the 'Resources' page.")
@@ -33,6 +32,7 @@ if page == "The Challenge":
     lit.write("2. The **faster** you are, the greater your chance of **winning** is! :medal:")
     lit.write("3. Only click 'Begin' **after you have informed an MTC council member** that you're going to begin. :stopwatch:")
     lit.write("4. We mainly focus on **Education, Environment, Professions, Sports, and Landmarks** :eyes:")
+    lit.write("[Here you go](https://quizizz.com/join?gc=89710760)")
     lit.write("")
 
 if page == "The Resources":
@@ -47,6 +47,6 @@ if page == "The Resources":
 
 if page == "MTC ESL GenAI Global Summit":
     lit.write("")
-    lit.image(img_2, use_column_width=False, width=300)
+    lit.image(img_1, use_column_width=False, width=300)
     lit.write("Microsoft Tech Club is organizing the Emirati Sign Language (ESL) Generative AI Summit, which is a part of the International Conference on Computational Intelligence and Network Systems (CINS 2023).")
     lit.markdown("[Click here to find out more and register!](https://esl.pythonanywhere.com/)")
