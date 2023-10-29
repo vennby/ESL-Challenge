@@ -32,7 +32,7 @@ if page == "The Challenge":
     lit.write("2. The **faster** you are, the greater your chance of **winning** is! :medal:")
     lit.write("3. Only click 'Begin' **after you have informed an MTC council member** that you're going to begin. :stopwatch:")
     lit.write("4. We mainly focus on **Education, Environment, Professions, Sports, and Landmarks** :eyes:")
-    lit.write("[Here you go](https://quizizz.com/join?gc=89710760)")
+    lit.write("[Here you go!](https://quizizz.com/join?gc=89710760)")
     lit.write("")
 
 if page == "The Resources":
